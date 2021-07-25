@@ -1,0 +1,34 @@
+<%- include ('../partials/header.ejs') %>
+
+<!-- <h2 class="page-title">Real Estate</h2>
+<a href="/admin/real-estate/add-real-estate" class="btn btn-primary">Add a new realestate</a>
+<br><br> -->
+
+<table class="table table-striped" style="margin: 30px;">
+
+    <thead>
+        <tr>
+            <th>Real Estate</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% util.forEach(function(util){ %>
+        <tr>
+            <td><%= util.name %></td>
+            <td><a href="/admin/real-estate/edit-real-estate/<%= util._id %>">Edit</a></td>
+            <td><a class="confirmDeletion" href="/admin/real-estate/delete-real-estate/<%= util._id %>">Delete</a></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<script>
+    $('a.confirmDeletion').on('click', function () {
+        if (!confirm('Confirm deletion'))
+            return false;
+    });
+    </script>
+
+<%- include('../partials/footer.ejs') %>

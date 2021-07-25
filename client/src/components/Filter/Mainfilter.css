@@ -1,0 +1,216 @@
+.filter-one{
+    width: 145px !important;
+    height: 50px !important;
+    position: relative !important;
+    font-size: 18px;
+}
+
+.filter-one-select{
+    position: absolute !important;
+    width: 145px !important;
+    height: 50px !important;
+    color: white;
+}
+
+.react-select__control{
+    width: 145px !important;
+    height: 50px !important;
+    align-items: center;
+    background: none !important;
+    border-style: none !important;
+    cursor: default;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.react-select__control:hover{
+    border: none !important;
+}
+
+.react-select__value-container{
+    height: 50px !important;
+    padding: 2px 0 !important;
+}
+.react-select__indicator-separator{
+    width: 0 !important;
+}
+
+.react-select__menu{
+    color: black !important;
+}
+
+.react-select__single-value{
+    color: white !important;
+}
+
+.react-select__placeholder{
+    color: white !important;
+}
+
+.react-select__indicator{
+    color: white !important;
+}
+
+.react-select__menu{
+    width: 200px !important;
+    height: 250px !important;
+}
+
+.react-select__menu-list{
+    width: 200px !important;
+    height: 250px !important;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+}
+
+.react-select__option{
+    align-self: flex-start;
+}
+
+/* two */
+.filter-two{
+    width: 185px !important;
+    height: 50px !important;
+    position: relative !important;
+    font-size: 18px;
+}
+
+.filter-two-select{
+    position: absolute !important;
+    width: 185px !important;
+    height: 50px !important;
+    color: white;
+}
+
+.react-select-two__control{
+    width: 185px !important;
+    height: 50px !important;
+    align-items: center;
+    background: none !important;
+    border-style: none !important;
+    cursor: default;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.react-select-two__control:hover{
+    border: none !important;
+}
+
+.react-select-two__value-container{
+    
+    height: 50px !important;
+    padding: 2px 0 !important;
+}
+.react-select-two__indicator-separator{
+    width: 0 !important;
+}
+
+.react-select-two__menu{
+    color: black !important;
+    
+}
+
+.react-select-two__single-value{
+    color: white !important;
+}
+
+.react-select-two__placeholder{
+    color: white !important;
+}
+
+.react-select-two__indicator{
+    color: white !important;
+}
+
+.react-select-two__menu{
+    width: 185px !important;
+    height: 95px !important;
+}
+
+.react-select-two__menu-list{
+    width: 185px !important;
+    height: 95px !important;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+}
+
+.react-select-two__option{
+    align-self: flex-start;
+}
+
+
+
+/* three */
+.filter-three{
+    width: 110px !important;
+    height: 50px !important;
+    position: relative !important;
+    font-size: 18px;
+}
+
+.filter-three-select{
+    position: absolute !important;
+    width: 110px !important;
+    height: 50px !important;
+    color: white;
+}
+
+.react-select-three__control{
+    width: 110px !important;
+    height: 50px !important;
+    align-items: center;
+    background: none !important;
+    border-style: none !important;
+    cursor: default;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.react-select-three__control:hover{
+    border: none !important;
+}
+
+.react-select-three__value-container{
+    height: 50px !important;
+    padding: 2px 0 !important;
+}
+.react-select-three__indicator-separator{
+    width: 0 !important;
+}
+
+.react-select-three__menu{
+    color: black !important;
+    
+}
+
+.react-select-three__single-value{
+    color: white !important;
+}
+
+.react-select-three__placeholder{
+    color: white !important;
+}
+
+.react-select-three__indicator{
+    color: white !important;
+}
+
+.react-select-three__menu{
+    width: 185px !important;
+    height: 250px !important;
+}
+
+.react-select-three__menu-list{
+    width: 185px !important;
+    height: 259px !important;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+}
+
+.react-select-three__option{
+    align-self: flex-start;
+}

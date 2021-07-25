@@ -1,0 +1,76 @@
+<%- include('../partials/header.ejs') %>
+
+<% if(message) { %>
+    <% if (message.length > 0)  { %>
+        <div class="alert alert-success">
+            <%= message %>
+        </div>
+    <% } %>
+<% } %>
+
+<h2 class="page-title" style="margin-left: 30px;">Edit a Real Estate</h2>
+<a href="/admin/real-estate" class="btn btn-primary" style="margin-left: 30px;">Back to all Real Estate</a>
+<br><br>
+
+<form method="post" action="/admin/real-estate/edit-real-estate/<%= id %>" style="margin: 30px;">
+    <input type="hidden" class="form-control" name="id" value="<%= id %>" placeholder="Name">
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" name="name"  value="<%= name %>"  placeholder="Name">
+    </div>
+    <div class="form-group">
+        <label for="">Area</label>
+        <input type="text" class="form-control" name="area"  value="<%= area %>"  placeholder="Area">
+    </div>
+    <div class="form-group">
+        <label for="">Area_by_num</label>
+        <input type="number" class="form-control" name="area_by_num"  value="<%= area_by_num %>"  placeholder="Area_by_num">
+    </div>
+    <div class="form-group">
+        <label for="">Direction</label>
+        <input type="text" class="form-control" name="direction"  value="<%= direction %>"  placeholder="Direction">
+    </div>
+    <div class="form-group">
+        <label for="">Num_bedroom</label>
+        <input type="number" class="form-control" name="num_bedroom"  value="<%= num_bedroom %>"  placeholder="Num_bedroom">
+    </div>
+    <div class="form-group">
+        <label for="">Num_wc</label>
+        <input type="number" class="form-control" name="num_wc"  value="<%= num_wc %>"  placeholder="Num_wc">
+    </div>
+    <div class="form-group">
+        <label for="">Full_address</label>
+        <input type="text" class="form-control" name="full_address"  value="<%= full_address %>"  placeholder="Full_address">
+    </div>
+    <div class="form-group">
+        <label for="">Ward</label>
+        <input type="text" class="form-control" name="ward"  value="<%= ward %>"  placeholder="Ward">
+    </div>
+    <div class="form-group">
+        <label for="">District</label>
+        <input type="text" class="form-control" name="district"  value="<%= district %>"  placeholder="District">
+    </div>
+    <div class="form-group">
+        <label for="">City</label>
+        <input type="text" class="form-control" name="city"  value="<%= city %>"  placeholder="City">
+    </div>
+    <div class="form-group">
+        <label for="">Price</label>
+        <input type="text" class="form-control" name="price"  value="<%= price %>"  placeholder="Price">
+    </div>
+    <div class="form-group">
+        <label for="">Price_by_num</label>
+        <input type="number" class="form-control" name="price_by_num"  value="<%= price_by_num %>"  placeholder="Price_by_num">
+    </div>
+    <div class="form-group">
+        <label for="">More_description</label>
+        <input type="text" class="form-control" name="more_description"  value="<%= more_description %>"  placeholder="More_description">
+    </div>
+    <div class="form-group">
+        <label for="">ImgList</label>
+        <input type="text" class="form-control" name="imgList"  value="<%= imgList %>"  placeholder="ImgList">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,436 @@
+.all-images {
+	height: 500px;
+	display: flex;
+	cursor: pointer;
+	border-radius: 20px;
+	overflow: hidden;
+    margin: 50px auto;
+    width: 100%;
+}
+
+.all-images .image-left {
+	flex: 1 1;
+	border-right: 1px solid #ffffff;
+}
+
+.all-images .image-left img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.all-images .image-right {
+    width: 44%;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1;
+	border-right: 1px solid #ffffff;
+}
+
+.all-images .image-right .image-top {
+	height: 50%;
+	display: flex;
+	flex: 1 1;
+	border-bottom: 1px solid #ffffff;
+}
+
+.all-images .image-right .image-top .image-top-left{
+    flex: 1 1;
+	border-right: 1px solid #ffffff;
+}
+
+.all-images .image-right .image-top .image-top-left img {
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.all-images .image-right .image-top .image-top-right{
+    flex: 1 1;
+	border-left: 1px solid #ffffff;
+}
+
+.all-images .image-right .image-top .image-top-right img{
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.all-images .image-right .image-bottom {
+	height: 50%;
+	display: flex;
+	flex: 1 1;
+	border-top: 1px solid #ffffff;
+}
+
+.all-images .image-right .image-bottom .image-bottom-left{
+    flex: 1 1;
+	border-right: 1px solid #ffffff;
+}
+
+.all-images .image-right .image-bottom .image-bottom-left img {
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.all-images .image-right .image-bottom .image-bottom-right{
+    flex: 1 1;
+	border-left: 1px solid #ffffff;
+}
+
+.all-images .image-right .image-bottom .image-bottom-right img{
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.infor-property{
+	margin-left: 75px;
+	margin-right: 75px;
+}
+
+.list-basic-infor{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-bottom: 1px solid #dee2e6!important;
+	padding-bottom: 15px;
+}
+
+.list-basic-infor .bg-selection {
+	transform: scale(1.2);
+    width: 18px;
+    height: 18px;
+    background: url("https://hoozing.com/css/css_sprites.png") -348px -202px;
+}
+
+.list-basic-infor .bg-hotel {
+	transform: scale(1.2);
+    width: 20px;
+    height: 14px;
+    background: url("https://hoozing.com/css/css_sprites.png") -210px -202px;
+}
+
+.list-basic-infor .bg-bathroom {
+	transform: scale(1.2);
+    width: 18px;
+    height: 18px;
+    background: url("https://hoozing.com/css/css_sprites.png") -348px -164px;
+}
+
+.list-basic-infor .bg-drawer {
+	transform: scale(1.2);
+    width: 18px;
+    height: 16px;
+    background: url("https://hoozing.com/css/css_sprites.png") -348px -240px;
+}
+
+.list-basic-infor .about-infor {
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.list-basic-infor ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.list-basic-infor .about-infor li{
+    margin-right: 20px!important;
+    display: flex;
+    align-items: center;
+}
+
+.list-basic-infor .about-infor li .icon {
+    margin-right: 8px!important;
+}
+
+.list-basic-infor .about-infor li p {
+    white-space: nowrap;
+    font-size: 17px;
+    color: #111;
+    font-weight: 550;
+    margin-bottom: 0 !important;
+}
+
+.list-basic-infor .about-price{
+	font-size: 30px;
+	margin-bottom: 15px;
+}
+
+.accordion{
+	margin-left: 75px;
+	margin-right: 75px;
+}
+
+.property-info-item+.property-info-item {
+    margin-top: 30px;
+    border-top: 1px solid #e7e7e7;
+    padding-top: 20px;
+}
+
+.property-info-item{
+	margin-top: 50px;
+}
+
+.property-info-title{
+	display: flex;
+    align-items:flex-start;
+    color: #04213f;
+    font-size: 28px;
+}
+
+.property-info-title img{
+	transform:  scale(1.2);
+	padding-right: 10px;
+}
+
+.property-info-item .property-info-content p{
+	margin-top: 15px !important;
+}
+
+.property-info-item .property-info-content{
+	color: #666;
+	font-size: 17px;
+}
+
+
+.property-info-item .property-content-detail{
+	max-height: 600px;
+}
+
+.property-facility ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.property-facility ul li{
+	display: flex;
+	align-items:center;
+	margin-bottom: 10px;
+    padding-left: 50px;
+    width: 33.33%;
+    color: #666;
+}
+
+.property-facility ul li img{
+	margin-right: 10px;
+	transform: scale(1.2);
+}
+
+.property-facility ul li p{
+	padding-top: 3.5px;
+	font-size: 20px;
+	font-weight: 500px;
+}
+
+.property-similar{
+	margin-bottom: 50px;
+}
+
+
+.hogi-more{
+    margin-top: 50px;
+}
+
+.container{
+    max-width: 1440px !important;
+}
+
+.hogi-more .btn-view-all {
+    top: 0;
+    right: 0;
+    z-index: 11;
+}
+
+.property-name {
+    margin-right: 50px;
+    float: left;
+}
+
+.btn-view-all{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease-in-out all;
+    border: 1px solid #0c4b9c;
+    border-radius: 4px;
+    min-width: 115px;
+    min-height: 35px;
+    color: #0c4b9c !important;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    float: right;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.btn-view-all em {
+    transition: .4s ease-in-out all;
+    color: #0c4b9c;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+    margin-left: 5px;
+    /* margin-top: 1px; */
+    margin-bottom: 0.5px;
+}
+
+.btn-view-all:hover{
+    background-color: #0c4b9c;
+    color: #fff !important;
+}
+
+.btn-view-all:hover em{
+    color: #fff !important;
+}
+
+.list-items{
+    width: 1440px;
+}
+
+.list-item{
+    width: 330px;
+    margin-right: 30px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    flex-wrap: wrap;
+}
+.apartment-item{
+    margin-top: 30px;
+    width: 330px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.apartment-item:hover{
+    cursor: pointer;
+}
+
+.apartment-item:hover .item-image img{
+    opacity: 0.6;
+    transition-duration: 0.5s;
+}
+
+.apartment-item .item-image{
+    width: 330px;
+    background: linear-gradient(359deg,#083267 0,#0c4b9c 90%);
+}
+
+.apartment-item .item-image img{
+    position: relative;
+    width: 330px;
+    height: 245px;
+}
+
+.apartment-item .item-caption{
+    border: 1px solid #e5e5e5;
+}
+
+.top-caption {
+    padding: 15px 20px;
+}
+
+.apartment-item .caption-title a {
+    font-size: 16px!important;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    transition: .4s ease-in-out all;
+    overflow: hidden;
+    color: #04213f;
+    font-weight: 700;
+    text-overflow: ellipsis;
+}
+
+.apartment-item .caption-list-infor {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.apartment-item ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+.apartment-item .caption-list-infor li{
+    margin-right: 10px!important;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.apartment-item .caption-list-infor li .icon {
+    margin-right: 5px!important;
+}
+
+.apartment-item .caption-list-infor li p {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #111;
+    font-weight: 500;
+    margin-bottom: 0 !important;
+}
+
+.apartment-item .bottom-caption {
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #e5e5e5;
+    padding: 8px 20px;
+}
+
+.apartment-item .caption-price p {
+    color: #0c4b9c;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.apartment-item .view-details {
+    display: flex;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    z-index: 111;
+    transition: .4s ease-in-out all;
+}
+
+.apartment-item .view-details a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: #fff;
+    padding: 5px 10px;
+    min-width: 150px;
+    height: 50px;
+    color: #0c4b9c !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.apartment-item:hover .view-details{
+    opacity: 1;
+    transition-duration: 0.3s;
+}

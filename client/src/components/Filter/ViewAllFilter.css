@@ -1,0 +1,218 @@
+.viewall-filter-one{
+    width: 200px !important;
+    height: 46px !important;
+    position: relative !important;
+    font-size: 17px;
+}
+
+.viewall-filter-one-select{
+    position: absolute !important;
+    width: 200px !important;
+    height: 46px !important;
+    color: white;
+}
+
+.react-select-viewall__control{
+    width: 185px !important;
+    height: 46px !important;
+    align-items: center;
+    background: none !important;
+    border-style: none !important;
+    cursor: default;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.react-select-viewall__control:hover{
+    border: none !important;
+}
+
+.react-select-viewall__value-container{
+    height: 46px !important;
+}
+.react-select-viewall__indicator-separator{
+    width: 0 !important;
+    height:  0 !important;
+    color: white !important;
+}
+
+.react-select-viewall__menu{
+    color: black !important;
+}
+
+.react-select-viewall__single-value{
+    color: black !important;
+}
+
+.react-select-viewall__placeholder{
+    color: black !important;
+}
+
+.react-select-viewall__indicator{
+    color: black !important;
+}
+
+.react-select-viewall__menu{
+    width: 200px !important;
+    height: 250px !important;
+}
+
+.react-select-viewall__menu-list{
+    width: 200px !important;
+    height: 250px !important;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+}
+
+.react-select-viewall__option{
+    align-self: flex-start;
+}
+
+/* two */
+.viewall-filter-two{
+    width: 200px !important;
+    height: 46px !important;
+    position: relative !important;
+    font-size: 17px;
+}
+
+.viewall-filter-two-select{
+    position: absolute !important;
+    width: 200px !important;
+    height: 46px !important;
+    color: white;
+}
+
+.react-select-viewall-two__control{
+    width: 185px !important;
+    height: 46px !important;
+    align-items: center;
+    background: none !important;
+    border-style: none !important;
+    cursor: default;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.react-select-viewall-two__control:hover{
+    border: none !important;
+}
+
+.react-select-viewall-two__value-container{
+    height: 50px !important;
+}
+.react-select-viewall-two__indicator-separator{
+    width: 0 !important;
+    height:  0 !important;
+    color: white !important;
+}
+
+.react-select-viewall-two__menu{
+    color: black !important;
+    
+}
+
+.react-select-viewall-two__single-value{
+    color: black !important;
+}
+
+.react-select-viewall-two__placeholder{
+    color: black !important;
+}
+
+.react-select-viewall-two__indicator{
+    color: black !important;
+}
+
+.react-select-viewall-two__menu{
+    width: 185px !important;
+    height: 95px !important;
+}
+
+.react-select-viewall-two__menu-list{
+    width: 185px !important;
+    height: 95px !important;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+}
+
+.react-select-viewall-two__option{
+    align-self: flex-start;
+}
+
+
+
+/* three */
+.viewall-filter-three{
+    width: 200px !important;
+    height: 46px !important;
+    position: relative !important;
+    font-size: 17px;
+}
+
+.viewall-filter-three-select{
+    position: absolute !important;
+    width: 200px !important;
+    height: 46px !important;
+    color: white;
+}
+
+.react-select-viewall-three__control{
+    width: 185px !important;
+    height: 46px !important;
+    align-items: center;
+    background: none !important;
+    border-style: none !important;
+    cursor: default;
+    color: white !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.react-select-viewall-three__control:hover{
+    border: none !important;
+}
+
+.react-select-viewall-three__value-container{
+    height: 50px !important;
+}
+.react-select-viewall-three__indicator-separator{
+    width: 0 !important;
+    height:  0 !important;
+    color: white !important;
+}
+
+.react-select-viewall-three__menu{
+    color: black !important;
+    
+}
+
+.react-select-viewall-three__single-value{
+    color: black !important;
+}
+
+.react-select-viewall-three__placeholder{
+    color: black !important;
+}
+
+.react-select-viewall-three__indicator{
+    color: black !important;
+}
+
+.react-select-viewall-three__menu{
+    width: 185px !important;
+    height: 250px !important;
+}
+
+.react-select-viewall-three__menu-list{
+    width: 185px !important;
+    height: 259px !important;
+    flex-wrap: nowrap;
+    align-self: flex-start;
+}
+
+.react-select-viewall-three__option{
+    align-self: flex-start;
+}

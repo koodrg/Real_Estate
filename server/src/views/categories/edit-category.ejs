@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs') %>
+
+<% if(message) { %>
+    <% if (message.length > 0)  { %>
+        <div class="alert alert-success">
+            <%= message %>
+        </div>
+    <% } %>
+<% } %>
+
+<h2 class="page-title" style="margin-left: 30px;">Edit a category</h2>
+<a href="/admin/categories" class="btn btn-primary" style="margin-left: 30px;">Back to all categories</a>
+<br><br>
+
+<form method="post" action="/admin/categories/edit-category/<%= id %>" style="margin: 30px;">
+    <input type="hidden" class="form-control" name="id" value="<%= id %>" placeholder="Name">
+    <div class="form-group"></div>
+        <label for="">Category Name</label>
+        <input type="text" class="form-control" name="cate_name" value="<%= cate_name %>" placeholder="Category Name">
+    </div>
+    <div class="form-group">
+        <label for="">Category Type</label>
+        <input type="text" class="form-control" name="cate_type" value="<%= cate_type %>" placeholder="Category Type">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<%- include('../partials/footer.ejs') %>

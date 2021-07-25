@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs') %>
+
+<h2 class="page-title" style="margin-left: 30px;">Add a utility</h2>
+<a href="/admin/utilities" class="btn btn-primary" style="margin-left: 30px;">Back to all utilities</a>
+<br><br>
+<% if (message.length > 0)  { %>
+    <div class="alert alert-success">
+        <%= message %>
+    </div>
+<% } %>
+
+<form  action="./add-utility" method="POST" style="margin: 30px;">
+    
+    <div class="form-group">
+        <label for="">Name</label>
+        <input type="text" class="form-control" name="name"  placeholder="Name">
+    </div>
+    <div class="form-group">
+        <label for="">Type</label>
+        <input type="text" class="form-control" name="type"  placeholder="Type">
+    </div>
+    
+    <input type ="submit" value ="Submit" class="btn btn-default">
+</form>
+
+<%- include('../partials/footer.ejs') %>
