@@ -1,24 +1,24 @@
 import {React,useState,useEffect, useContext} from 'react'
 import './ViewAll.css'
 import ReactPaginate from 'react-paginate'
-import { UserContext } from '../../../App'
+import { UserContext } from '../../App'
 import {useHistory, Link } from 'react-router-dom'
-import { ViewAllfilter, ViewAllfilter1, ViewAllfilter2, ViewAllfilter3 } from '../../Filter/ViewAllFilter'
+import { ViewAllfilter, ViewAllfilter1, ViewAllfilter2, ViewAllfilter3 } from '../../components/Filter/ViewAllFilter'
 
-const ApartmentSale = () => {
+const ApartmentRent = () => {
     const history = useHistory()
     const [data, setData] = useState([])
     const [datas, setDatas] = useState([])
     const { state, dispatch } = useContext(UserContext)
-    const [isClick, setIsClick] = useState(1)
-    var [id, setId] = useState('/mua-ban/can-ho')
+    const [isClick, setIsClick] = useState(2)
+    var [id, setId] = useState('/cho-thue/can-ho')
     var displayDatas = 0
     var pageCount = 0
     var changePage = 0
-    var address = null 
+    var address = null
     var category = null
-    var price_min
-    var price_max
+    var price_min 
+    var price_max 
     if (state) {
         address = state[0]
         category = state[1]
@@ -80,7 +80,7 @@ const ApartmentSale = () => {
     
 
     const search = () => {
-        console.log(id)
+        // console.log(id)
         const data = [address, category, price_min, price_max]
         console.log(data)
         localStorage.setItem("address", data[0])
@@ -92,44 +92,44 @@ const ApartmentSale = () => {
     }
 
     useEffect(() => {
-        fetch('/real-estate/get-by-category/apartments_for_sale', {
-        }).then(res => res.json())
-            .then(result => {
-                setData(result)
-            })
+            fetch('/real-estate/get-by-category/apartments_for_rent', {
+            }).then(res => res.json())
+                .then(result => {
+                    setData(result)
+                })
+            
     }, [])
-    
-    console.log(address)
-    console.log(category)
-    console.log(price_min)
-    console.log(price_max)
+
+    // console.log(address)
+    // console.log(category)
+    // console.log(price_min)
+    // console.log(price_max)
 
     useEffect(() => {
-        if(address!==null && category !==null){
+        if (address !== null && category !== null) {
             fetch(`/real-estate/api/_search?q=${address}&category=${category}`, {
             }).then(res => res.json())
                 .then(result => {
                     setDatas(result.data)
                 })
-            }
-    }, [address, category])
+        }
+    }, [category])
     
     useEffect(() => {
         if (price_min !== undefined && price_max !== undefined) {
-            console.log('aaaaaaaa')
             fetch(`/real-estate/api/_search?q=${address}&category=${category}&price_max=${price_max}&price_min=${price_min}`, {
             }).then(res => res.json())
                 .then(result => {
                     setDatas(result.data)
             })
         }
-    },[price_max, price_min])
+    },[price_min])
 
     const [pageNumber, setPageNumber] = useState(0)
     const datasPerPage = 15
     const pagesVisited = pageNumber * datasPerPage
     var length = 0
-    if (datas.length!=0)
+    if (datas.length != 0)
     {
         displayDatas = datas.slice(pagesVisited, pagesVisited + datasPerPage)
         displayDatas = displayDatas.map((item) => {
@@ -137,6 +137,7 @@ const ApartmentSale = () => {
         })
         pageCount = Math.ceil(datas.length / datasPerPage)
         changePage = ({selected}) => {
+            localStorage.setItem("pageNumber", selected)
             setPageNumber(selected)
         }
         length = datas.length
@@ -144,16 +145,17 @@ const ApartmentSale = () => {
         displayDatas = data.slice(pagesVisited, pagesVisited + datasPerPage)
         pageCount = Math.ceil(data.length / datasPerPage)
         changePage = ({selected}) => {
+            localStorage.setItem("pageNumber", selected)
             setPageNumber(selected)
         }
         length = data.length
     }
 
-
     console.log(data)
     console.log(datas)
     console.log(displayDatas.length)
     console.log(isClick)
+    console.log(changePage)
     
     if (displayDatas.length === 0)
     {
@@ -167,8 +169,8 @@ const ApartmentSale = () => {
                         <div className="form-group form-search-box">
                             <div className="form-select">
                                 <select className="form-control" onChange={(e) => onChangeInput(e.target.value)}>
-                                    <option value="ForBuy">Mua Bán</option>
-                                    <option value="ForRent">Cho thuê</option>
+                                    <option value="ForBuy" >Mua Bán</option>
+                                    <option value="ForRent" >Cho thuê</option>
                                 </select>
                             </div>
                             <div className="form-search">
@@ -218,7 +220,7 @@ const ApartmentSale = () => {
                             </ul>
                         </div>
                         <div className="head-ds-bds">
-                            <h2 className="title">Mua bán Căn Hộ</h2>
+                            <h2 className="title">Cho Thuê Căn Hộ</h2>
                             <div className="apartment-number">
                                 <p>
                                     <span>
@@ -296,4 +298,4 @@ const ApartmentSale = () => {
     }
 }
 
-export default ApartmentSale;
+export default ApartmentRent;

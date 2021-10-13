@@ -1,24 +1,24 @@
 import {React,useState,useEffect, useContext} from 'react'
 import './ViewAll.css'
 import ReactPaginate from 'react-paginate'
-import { UserContext } from '../../../App'
+import { UserContext } from '../../App'
 import {useHistory, Link } from 'react-router-dom'
-import { ViewAllfilter, ViewAllfilter1, ViewAllfilter2, ViewAllfilter3 } from '../../Filter/ViewAllFilter'
+import { ViewAllfilter, ViewAllfilter1, ViewAllfilter2, ViewAllfilter3 } from '../../components/Filter/ViewAllFilter'
 
-const ApartmentRent = () => {
+const HometownRent = () => {
     const history = useHistory()
     const [data, setData] = useState([])
     const [datas, setDatas] = useState([])
     const { state, dispatch } = useContext(UserContext)
     const [isClick, setIsClick] = useState(2)
-    var [id, setId] = useState('/cho-thue/can-ho')
+    var [id, setId] = useState('/cho-thue/nha-pho')
     var displayDatas = 0
     var pageCount = 0
     var changePage = 0
     var address = null
     var category = null
-    var price_min 
-    var price_max 
+    var price_min
+    var price_max
     if (state) {
         address = state[0]
         category = state[1]
@@ -77,8 +77,6 @@ const ApartmentRent = () => {
         price_max = value.value[1]
     }
 
-    
-
     const search = () => {
         console.log(id)
         const data = [address, category, price_min, price_max]
@@ -92,13 +90,11 @@ const ApartmentRent = () => {
     }
 
     useEffect(() => {
-        
-            fetch('/real-estate/get-by-category/apartments_for_rent', {
-            }).then(res => res.json())
-                .then(result => {
-                    setData(result)
-                })
-            
+        fetch('/real-estate/get-by-category/townhouses_for_rent', {
+        }).then(res => res.json())
+            .then(result => {
+                setData(result)
+            })
     }, [])
 
     console.log(address)
@@ -107,14 +103,12 @@ const ApartmentRent = () => {
     console.log(price_max)
 
     useEffect(() => {
-        if (address !== null && category !== null) {
             fetch(`/real-estate/api/_search?q=${address}&category=${category}`, {
             }).then(res => res.json())
                 .then(result => {
                     setDatas(result.data)
                 })
-        }
-    }, [category])
+    }, [address, category])
     
     useEffect(() => {
         if (price_min !== undefined && price_max !== undefined) {
@@ -154,7 +148,6 @@ const ApartmentRent = () => {
     console.log(datas)
     console.log(displayDatas.length)
     console.log(isClick)
-    console.log(changePage)
     
     if (displayDatas.length === 0)
     {
@@ -168,8 +161,8 @@ const ApartmentRent = () => {
                         <div className="form-group form-search-box">
                             <div className="form-select">
                                 <select className="form-control" onChange={(e) => onChangeInput(e.target.value)}>
-                                    <option value="ForBuy" >Mua Bán</option>
-                                    <option value="ForRent" >Cho thuê</option>
+                                    <option value="ForBuy">Mua Bán</option>
+                                    <option value="ForRent">Cho thuê</option>
                                 </select>
                             </div>
                             <div className="form-search">
@@ -214,12 +207,12 @@ const ApartmentRent = () => {
                                 </li>
                                 <li className="breadcrumb-item">
                                     <i className="fa fa-chevron-right"></i>
-                                    <a>Căn hộ</a>
+                                    <a>Nhà phố</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="head-ds-bds">
-                            <h2 className="title">Cho Thuê Căn Hộ</h2>
+                            <h2 className="title">Cho Thuê Nhà Phố</h2>
                             <div className="apartment-number">
                                 <p>
                                     <span>
@@ -297,4 +290,4 @@ const ApartmentRent = () => {
     }
 }
 
-export default ApartmentRent;
+export default HometownRent;

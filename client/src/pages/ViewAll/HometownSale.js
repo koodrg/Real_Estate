@@ -1,17 +1,17 @@
 import {React,useState,useEffect, useContext} from 'react'
 import './ViewAll.css'
 import ReactPaginate from 'react-paginate'
-import { UserContext } from '../../../App'
+import { UserContext } from '../../App'
 import {useHistory, Link } from 'react-router-dom'
-import { ViewAllfilter, ViewAllfilter1, ViewAllfilter2, ViewAllfilter3 } from '../../Filter/ViewAllFilter'
+import { ViewAllfilter, ViewAllfilter1, ViewAllfilter2, ViewAllfilter3 } from '../../components/Filter/ViewAllFilter'
 
-const HometownRent = () => {
+const HometownSale = () => {
     const history = useHistory()
     const [data, setData] = useState([])
     const [datas, setDatas] = useState([])
     const { state, dispatch } = useContext(UserContext)
-    const [isClick, setIsClick] = useState(2)
-    var [id, setId] = useState('/cho-thue/nha-pho')
+    const [isClick, setIsClick] = useState(1)
+    var [id, setId] = useState('/mua-ban/nha-pho')
     var displayDatas = 0
     var pageCount = 0
     var changePage = 0
@@ -77,6 +77,7 @@ const HometownRent = () => {
         price_max = value.value[1]
     }
 
+    
     const search = () => {
         console.log(id)
         const data = [address, category, price_min, price_max]
@@ -89,8 +90,9 @@ const HometownRent = () => {
         history.push(id)
     }
 
+
     useEffect(() => {
-        fetch('/real-estate/get-by-category/townhouses_for_rent', {
+        fetch('/real-estate/get-by-category/townhouses_for_sale', {
         }).then(res => res.json())
             .then(result => {
                 setData(result)
@@ -108,7 +110,7 @@ const HometownRent = () => {
                 .then(result => {
                     setDatas(result.data)
                 })
-    }, [address, category])
+    }, [category])
     
     useEffect(() => {
         if (price_min !== undefined && price_max !== undefined) {
@@ -212,7 +214,7 @@ const HometownRent = () => {
                             </ul>
                         </div>
                         <div className="head-ds-bds">
-                            <h2 className="title">Cho Thuê Nhà Phố</h2>
+                            <h2 className="title">Mua Bán Nhà Phố</h2>
                             <div className="apartment-number">
                                 <p>
                                     <span>
@@ -290,4 +292,4 @@ const HometownRent = () => {
     }
 }
 
-export default HometownRent;
+export default HometownSale;

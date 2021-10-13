@@ -1,8 +1,8 @@
-import { React, useState, useEffect,  useContext, createContext,useReducer } from 'react'
+import { React, useState, useEffect,  useContext} from 'react'
 import {useHistory, Link } from 'react-router-dom'
 import './Homepage.css'
-import { UserContext } from '../../../App'
-import { Mainfilter, Mainfilter1, Mainfilter2, Mainfilter3 }from '../../Filter/Mainfilter'
+import { UserContext } from '../../App'
+import { Mainfilter, Mainfilter1, Mainfilter2, Mainfilter3 }from '../../components/Filter/Mainfilter'
 
 const Homepage = () => {
     const history = useHistory()
@@ -65,7 +65,7 @@ const Homepage = () => {
         setAddress(value.value)
     }
     async function onChangeInput1(value) {
-        if (value.value == "căn hộ" && isClick == 1)
+        if (value.value === "căn hộ" && isClick == 1)
         {
             const response = await(await fetch('/categories/get-id-by-type/apartments_for_sale'));
             const responseJson = await response.json()
@@ -73,7 +73,7 @@ const Homepage = () => {
             console.log(category);
             setId('/mua-ban/can-ho');
         }
-        else if (value.value == "căn hộ" && isClick == 2)
+        else if (value.value === "căn hộ" && isClick === 2)
         {
             //category = await fetch('/categories/get-id-by-type/apartments_for_rent');
             const response = await(await fetch('/categories/get-id-by-type/apartments_for_rent'));
@@ -81,7 +81,7 @@ const Homepage = () => {
             setCategory(responseJson);
             setId('/cho-thue/can-ho');
         }
-        else if (value.value == "nhà" && isClick == 1)
+        else if (value.value === "nhà" && isClick === 1)
         {
             //category = await fetch('/categories/get-id-by-type/townhouses_for_sale');
             const response = await(await fetch('/categories/get-id-by-type/townhouses_for_sale'));
@@ -89,7 +89,7 @@ const Homepage = () => {
             setCategory(responseJson);
             setId('/mua-ban/nha-pho');
         }
-        else if (value.value == "nhà" && isClick == 2)
+        else if (value.value === "nhà" && isClick === 2)
         {
             //category = await fetch('/categories/get-id-by-type/townhouses_for_rent');
             const response = await(await fetch('/categories/get-id-by-type/townhouses_for_rent'));

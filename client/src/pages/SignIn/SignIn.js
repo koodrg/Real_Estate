@@ -2,7 +2,7 @@ import { Link, useHistory } from 'react-router-dom'
 import { useState, useContext} from 'react'
 import './SignIn.css'
 import M from 'materialize-css'
-import {UserContext} from '../../../App'
+import {UserContext} from '../../App'
 
 const SignIn = () => {
     const history = useHistory()

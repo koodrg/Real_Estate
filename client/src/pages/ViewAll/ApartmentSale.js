@@ -1,21 +1,21 @@
 import {React,useState,useEffect, useContext} from 'react'
 import './ViewAll.css'
 import ReactPaginate from 'react-paginate'
-import { UserContext } from '../../../App'
+import { UserContext } from '../../App'
 import {useHistory, Link } from 'react-router-dom'
-import { ViewAllfilter, ViewAllfilter1, ViewAllfilter2, ViewAllfilter3 } from '../../Filter/ViewAllFilter'
+import { ViewAllfilter, ViewAllfilter1, ViewAllfilter2, ViewAllfilter3 } from '../../components/Filter/ViewAllFilter'
 
-const HometownSale = () => {
+const ApartmentSale = () => {
     const history = useHistory()
     const [data, setData] = useState([])
     const [datas, setDatas] = useState([])
     const { state, dispatch } = useContext(UserContext)
     const [isClick, setIsClick] = useState(1)
-    var [id, setId] = useState('/mua-ban/nha-pho')
+    var [id, setId] = useState('/mua-ban/can-ho')
     var displayDatas = 0
     var pageCount = 0
     var changePage = 0
-    var address = null
+    var address = null 
     var category = null
     var price_min
     var price_max
@@ -78,6 +78,7 @@ const HometownSale = () => {
     }
 
     
+
     const search = () => {
         console.log(id)
         const data = [address, category, price_min, price_max]
@@ -90,37 +91,39 @@ const HometownSale = () => {
         history.push(id)
     }
 
-
     useEffect(() => {
-        fetch('/real-estate/get-by-category/townhouses_for_sale', {
+        fetch('/real-estate/get-by-category/apartments_for_sale', {
         }).then(res => res.json())
             .then(result => {
                 setData(result)
             })
     }, [])
-
+    
     console.log(address)
     console.log(category)
     console.log(price_min)
     console.log(price_max)
 
     useEffect(() => {
+        if(address!==null && category !==null){
             fetch(`/real-estate/api/_search?q=${address}&category=${category}`, {
             }).then(res => res.json())
                 .then(result => {
                     setDatas(result.data)
                 })
-    }, [category])
+            }
+    }, [address, category])
     
     useEffect(() => {
         if (price_min !== undefined && price_max !== undefined) {
+            console.log('aaaaaaaa')
             fetch(`/real-estate/api/_search?q=${address}&category=${category}&price_max=${price_max}&price_min=${price_min}`, {
             }).then(res => res.json())
                 .then(result => {
                     setDatas(result.data)
             })
         }
-    },[price_min])
+    },[price_max, price_min])
 
     const [pageNumber, setPageNumber] = useState(0)
     const datasPerPage = 15
@@ -145,6 +148,7 @@ const HometownSale = () => {
         }
         length = data.length
     }
+
 
     console.log(data)
     console.log(datas)
@@ -209,12 +213,12 @@ const HometownSale = () => {
                                 </li>
                                 <li className="breadcrumb-item">
                                     <i className="fa fa-chevron-right"></i>
-                                    <a>Nhà phố</a>
+                                    <a>Căn hộ</a>
                                 </li>
                             </ul>
                         </div>
                         <div className="head-ds-bds">
-                            <h2 className="title">Mua Bán Nhà Phố</h2>
+                            <h2 className="title">Mua bán Căn Hộ</h2>
                             <div className="apartment-number">
                                 <p>
                                     <span>
@@ -292,4 +296,4 @@ const HometownSale = () => {
     }
 }
 
-export default HometownSale;
+export default ApartmentSale;
